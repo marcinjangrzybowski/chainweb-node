@@ -258,6 +258,7 @@ library
         , Chainweb.Utils.Serialization
         , Chainweb.VerifierPlugin
         , Chainweb.VerifierPlugin.Allow
+        , Chainweb.VerifierPlugin.Ownera
         , Chainweb.VerifierPlugin.Hyperlane.Announcement
         , Chainweb.VerifierPlugin.Hyperlane.Binary
         , Chainweb.VerifierPlugin.Hyperlane.Message
@@ -473,6 +474,7 @@ library
         , warp-tls >= 3.4
         , yaml >= 0.11
         , yet-another-logger >= 0.4.1
+        , ppad-secp256k1
 
     if flag(ed25519)
         cpp-options: -DWITH_ED25519=1
@@ -655,6 +657,7 @@ test-suite chainweb-tests
         Chainweb.Test.Pact5.CheckpointerTest
         Chainweb.Test.Pact5.CutFixture
         Chainweb.Test.Pact5.HyperlanePluginTests
+        Chainweb.Test.Pact5.OwneraPluginTests
         Chainweb.Test.Pact5.PactServiceTest
         Chainweb.Test.Pact5.RemotePactTest
         Chainweb.Test.Pact5.SPVTest

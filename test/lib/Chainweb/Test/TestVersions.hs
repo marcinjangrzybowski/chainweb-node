@@ -359,7 +359,7 @@ slowForkingCpmTestVersion g = buildTestVersion $ \v -> v
     & versionName .~ ChainwebVersionName ("slowfork-CPM-" <> toText g)
     & versionForks .~ slowForks
     & versionVerifierPluginNames .~ AllChains
-        (Bottom (minBound, Set.fromList $ map VerifierName ["allow", "hyperlane_v3_announcement", "hyperlane_v3_message"]))
+        (Bottom (minBound, Set.fromList $ map VerifierName ["allow", "hyperlane_v3_announcement", "hyperlane_v3_message", "ownera_message"]))
     & versionQuirks .~ noQuirks
 
 -- | CPM version (see `cpmTestVersion`) with forks and upgrades instantly enabled,
@@ -447,7 +447,7 @@ instantCpmTestVersion g = buildTestVersion $ \v -> v
     & versionVerifierPluginNames .~ AllChains
         (Bottom
             ( minBound
-            , Set.fromList $ map VerifierName ["allow", "hyperlane_v3_announcement", "hyperlane_v3_message"]
+            , Set.fromList $ map VerifierName ["allow", "hyperlane_v3_announcement", "hyperlane_v3_message", "ownera_message"]
             )
         )
 
@@ -472,7 +472,7 @@ pact5InstantCpmTestVersion g = buildTestVersion $ \v -> v
     & versionVerifierPluginNames .~ AllChains
         (Bottom
             ( minBound
-            , Set.fromList $ map VerifierName ["allow", "hyperlane_v3_announcement", "hyperlane_v3_message"]
+            , Set.fromList $ map VerifierName ["allow", "hyperlane_v3_announcement", "hyperlane_v3_message", "ownera_message"]
             )
         )
 
@@ -504,7 +504,7 @@ pact5SlowCpmTestVersion g = buildTestVersion $ \v -> v
     & versionVerifierPluginNames .~ AllChains
         (Bottom
             ( minBound
-            , Set.fromList $ map VerifierName ["allow", "hyperlane_v3_announcement", "hyperlane_v3_message"]
+            , Set.fromList $ map VerifierName ["allow", "hyperlane_v3_announcement", "hyperlane_v3_message", "ownera_message"]
             )
         )
 
@@ -530,6 +530,6 @@ instantCpmTransitionTestVersion g = buildTestVersion $ \v -> v
     & versionVerifierPluginNames .~ AllChains
         (Bottom
             ( minBound
-            , Set.fromList $ map VerifierName ["allow", "hyperlane_v3_announcement", "hyperlane_v3_message"]
+            , Set.fromList $ map VerifierName ["allow", "hyperlane_v3_announcement", "hyperlane_v3_message", "ownera_message"]
             )
         )
