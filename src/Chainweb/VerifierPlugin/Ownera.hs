@@ -11,7 +11,7 @@
 {-# LANGUAGE TypeOperators #-}
 {-# LANGUAGE PackageImports #-}
 
--- | Implementation of Hyperlane natives.
+-- | Implementation of Ownera natives.
 module Chainweb.VerifierPlugin.Ownera
   ( OwneraSchemaId(..)
   , decodeFinApiHashList
