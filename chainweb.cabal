@@ -1,7 +1,7 @@
 cabal-version: 3.8
 
 name:         chainweb
-version:      2.29
+version:      2.29.1
 synopsis:     A Proof-of-Work Parallel-Chain Architecture for Massive Throughput
 description:  A Proof-of-Work Parallel-Chain Architecture for Massive Throughput.
 homepage:     https://github.com/kadena-io/chainweb
@@ -256,6 +256,11 @@ library
         , Chainweb.Utils.Serialization
         , Chainweb.VerifierPlugin
         , Chainweb.VerifierPlugin.Allow
+        , Chainweb.VerifierPlugin.SignedList
+        , Chainweb.VerifierPlugin.Ownera
+        , Chainweb.VerifierPlugin.Ownera.Types
+        , Chainweb.VerifierPlugin.Ownera.HashList
+        , Chainweb.VerifierPlugin.Ownera.Crypto
         , Chainweb.VerifierPlugin.Hyperlane.Announcement
         , Chainweb.VerifierPlugin.Hyperlane.Binary
         , Chainweb.VerifierPlugin.Hyperlane.Message
@@ -652,6 +657,7 @@ test-suite chainweb-tests
         Chainweb.Test.Pact5.CheckpointerTest
         Chainweb.Test.Pact5.CutFixture
         Chainweb.Test.Pact5.HyperlanePluginTests
+        Chainweb.Test.Pact5.OwneraPluginTests
         Chainweb.Test.Pact5.PactServiceTest
         Chainweb.Test.Pact5.RemotePactTest
         Chainweb.Test.Pact5.SPVTest
