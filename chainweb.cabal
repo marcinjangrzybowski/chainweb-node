@@ -256,6 +256,7 @@ library
         , Chainweb.Utils.Serialization
         , Chainweb.VerifierPlugin
         , Chainweb.VerifierPlugin.Allow
+        , Chainweb.VerifierPlugin.SignedList
         , Chainweb.VerifierPlugin.Hyperlane.Announcement
         , Chainweb.VerifierPlugin.Hyperlane.Binary
         , Chainweb.VerifierPlugin.Hyperlane.Message
@@ -652,6 +653,7 @@ test-suite chainweb-tests
         Chainweb.Test.Pact5.CheckpointerTest
         Chainweb.Test.Pact5.CutFixture
         Chainweb.Test.Pact5.HyperlanePluginTests
+        Chainweb.Test.Pact5.SignedListPluginTests
         Chainweb.Test.Pact5.PactServiceTest
         Chainweb.Test.Pact5.RemotePactTest
         Chainweb.Test.Pact5.SPVTest
