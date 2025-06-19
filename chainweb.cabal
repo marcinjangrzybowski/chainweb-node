@@ -256,7 +256,6 @@ library
         , Chainweb.Utils.Serialization
         , Chainweb.VerifierPlugin
         , Chainweb.VerifierPlugin.Allow
-        , Chainweb.VerifierPlugin.SignedList
         , Chainweb.VerifierPlugin.Ownera
         , Chainweb.VerifierPlugin.Ownera.Types
         , Chainweb.VerifierPlugin.Ownera.HashList
@@ -475,6 +474,7 @@ library
         , warp-tls >= 3.4
         , yaml >= 0.11
         , yet-another-logger >= 0.4.1
+        , ppad-secp256k1
 
     if flag(ed25519)
         cpp-options: -DWITH_ED25519=1

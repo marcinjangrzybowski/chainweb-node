@@ -12,7 +12,6 @@ import Data.Aeson qualified as Aeson
 
 import Data.Aeson.QQ.Simple
 
-
 import PropertyMatchers ((?))
 import PropertyMatchers qualified as P
 import Test.Tasty
@@ -175,11 +174,7 @@ owneraExampleMsgProofSnd = [aesonQQ|
               { "name": "amount",         "type": "string",  "value": "1000000" }
             ],
             "hash": "2706f86799aff21e6958122405b482d52103143babbb86814971a2a3ff41e295"
-          }
-        ],
-        "type": "hashList"
-      }
-    }
+}]}}
 ,"initiator"]
 |]
   
